@@ -1,0 +1,65 @@
+.author-and-medical-review {
+    p {
+        margin: 0;
+        line-height: 1.5;
+    }
+    img {
+        width: 115px;
+        max-width: 115px;
+        height: 115px;
+        max-height: 115px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .last-edited {
+        color: $black;
+        font-weight: 600;
+    }
+    .date {
+        color: $grey;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .title {
+        color: $black;
+        font-weight: 600;
+    }
+    .name {
+        color: $secondaryColor;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .bio {
+        position: absolute;
+        -webkit-box-shadow: 0 8px 16px 0 #000;
+        box-shadow: 0 8px 16px 0 #000;
+        z-index: 10;
+        background: #fff;
+        border: 2px solid $secondaryColor;
+        border-radius: 2px;
+        padding: 10px;
+        top: 80%;
+        right: 50%;
+        max-height: 250px;
+        overflow-y: auto;
+        min-width: 300px;
+    }
+
+    &--mobile {
+        @include desktop {
+            display: none;
+        }
+        .author_container {
+            border-bottom: 1px solid;
+        }
+    }
+    &--desktop {
+        background-color: $navColor;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 32px;
+        @include mobile-and-tablet {
+            display: none;
+        }
+    }
+}
